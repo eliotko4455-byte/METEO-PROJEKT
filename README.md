@@ -14,7 +14,7 @@ Vzdialené zobrazenie a ovládanie cez mobilný telefón
 
 Nastavenie meteostanice priamo na displeji
 
-Hlavná obrazovka
+![Hlavná obrazovka meteostanice – 7" displej](METEO_OBRAZOVKA.png)
 
 Fotografia meteostanice je dostupná medzi súbormi tohto repozitára.
 
