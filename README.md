@@ -16,11 +16,7 @@ Nastavenie meteostanice priamo na displeji
 
 ![Hlavná obrazovka meteostanice – 7" displej](METEO_OBRAZOVKA.png)
 
-Fotografia meteostanice je dostupná medzi súbormi tohto repozitára.
-
-Zdrojový kód
-
-Zdrojový kód projektu nie je verejne dostupný.
+Zdrojový kód projektu nie je verejne dostupný. 
 
 V prípade záujmu o zdrojový kód alebo technické informácie ma môžete kontaktovať e-mailom.
 
