@@ -1,39 +1,78 @@
-METEO – WiFi meteostanica
+# METEO – Wi-Fi meteostanica
 
-Vlastný projekt meteostanice postavenej na Raspberry Pi so 7" dotykovým displejom a externým senzorovým modulom ESP32-C6.
+Vlastný projekt meteostanice postavenej na **Raspberry Pi**, so 7-palcovým dotykovým displejom a samostatným vonkajším meracím modulom. Grafické používateľské rozhranie s rozlíšením **800 × 480 px** vychádza z verzie **METEO223**.
 
-Funkcie
+## Hardvér
 
-Zobrazovanie meteorologických údajov na dotykovom displeji
+- **Raspberry Pi** – hlavná jednotka, spracovanie nameraných údajov, predpovede počasia a ovládanie dotykového rozhrania.
+- **Oficiálny 7" dotykový displej pre Raspberry Pi** – zobrazenie hodín, meteorologických údajov a nastavení.
+- **Vnútorný senzor BME280** – teplota, relatívna vlhkosť a atmosférický tlak; pripojenie cez **I²C** (adresa `0x77`).
+- **Vonkajší modul ESP32-C6 + BME280** – samostatné meranie teploty, vlhkosti a tlaku. Údaje odosiela cez **2,4 GHz Wi-Fi**.
+- **Wi-Fi adaptér TP-Link pre 5 GHz** – pripojenie hlavnej jednotky k domácej sieti, s indikáciou sily signálu.
 
-Bezdrôtový prenos údajov cez WiFi
+## Funkcie a ovládanie obrazoviek
 
-Grafické používateľské rozhranie
+### 1. Hlavná meteorologická obrazovka
 
-Vzdialené zobrazenie a ovládanie cez mobilný telefón
+- Aktuálna vnútorná a vonkajšia **teplota, vlhkosť a tlak**.
+- Dátum, čas a aktuálny stav počasia s **animovanými ikonami**.
+- Predpoveď na najbližších **5 hodín**, predpoveď na zajtra a samostatná **7-dňová predpoveď**.
+- Graf vývoja teploty v priebehu dňa.
+- Pocitová teplota, vietor, zrážky a UV index podľa dostupných meteorologických údajov.
+- Fáza Mesiaca, údaje o Slnku a časy východu a západu.
+- Prístup k obrazovkám **Nastavenia, Grafy, Mapa, Radar a 7 dní**.
+- Predpoveď využíva údaje **SHMÚ ALADIN** s náhradným zdrojom **Open-Meteo**, ak nie sú údaje SHMÚ dostupné.
 
-Nastavenie meteostanice priamo na displeji
+### 2. Obrazovka s analógovými hodinami
+
+- Veľký analógový ciferník s aktualizáciou ručičiek.
+- Aktuálny dátum a meteorologické údaje z vnútorného aj vonkajšieho modulu.
+- Informácia o počasí s animovanou ikonou.
+- Indikácia sily domácej **5 GHz Wi-Fi** a spojenia s vonkajším modulom.
+- Ukazovatele **jasu displeja** a **teploty procesora Raspberry Pi**.
+- Dotykom na obrazovku hodín sa zobrazí hlavná meteorologická obrazovka.
+
+### 3. SETUP – nastavenia meteostanice
+
+- **BACK LIGHT:** ručné nastavenie denného a nočného jasu, časov režimov a okamžitý náhľad zmeny jasu.
+- **SUN AUTO:** automatické riadenie jasu podľa východu a západu slnka s plynulým **30-minútovým prechodom**.
+- **SLNKO:** samostatná korekcia časov automatického prepínania podľa východu a západu slnka, v rozsahu ±120 minút a krokom 10 minút; bez zmeny údajov predpovede.
+- **KOREKCIA:** kalibrácia zobrazovanej teploty a vlhkosti vnútorného BME280.
+- **WiFi:** výber a konfigurácia domácej bezdrôtovej siete prostredníctvom dotykovej klávesnice.
+- **ESP32:** nastavenie pripojenia vonkajšieho modulu k 2,4 GHz sieti.
+- Možnosť nastavenia uložiť alebo zrušiť.
+
+## Radar a ďalšie funkcie
+
+- **SHMÚ radar ZMAX:** celoobrazovkový radar s animáciou zachytených snímok, časovým posuvom a históriou približne **50 minút**.
+- **Mapa:** mapové podklady **OpenStreetMap**.
+- Bezdrôtový zber údajov z vonkajšieho modulu s kontrolou aktuálnosti meraní.
+- Možnosť vzdialeného zobrazenia a ovládania cez mobilný telefón.
+
+## Fotografie skutočných obrazoviek
+
+Snímky pochádzajú priamo z bežiacej meteostanice. Makro **PUBLIC FOTO** ich môže aktualizovať pod rovnakými názvami bez zmeny tejto dokumentácie.
 
 <!-- METEO PUBLIC FOTO START -->
 
-### Hlavna obrazovka
+### Hlavná obrazovka
 
-![Hlavna obrazovka meteostanice](METEO_OBRAZOVKA.png)
+![Hlavná obrazovka meteostanice](METEO_OBRAZOVKA.png)
 
 ### Hodiny
 
-![Obrazovka s hodinami](METEO_HODINY.png)
+![Obrazovka s analógovými hodinami](METEO_HODINY.png)
 
 ### SETUP
 
-![Obrazovka nastaveni SETUP](METEO_SETUP.png)
+![Obrazovka nastavení meteostanice](METEO_SETUP.png)
 
 <!-- METEO PUBLIC FOTO END -->
 
-Zdrojový kód projektu nie je verejne dostupný. 
+## Zdrojový kód a kontakt
 
-V prípade záujmu o zdrojový kód alebo technické informácie ma môžete kontaktovať e-mailom.
+Zdrojový kód projektu nie je verejne dostupný.
 
-Kontakt: eligo2233@gmail.com
+V prípade záujmu o zdrojový kód alebo technické informácie ma môžete kontaktovať e-mailom: **eligo2233@gmail.com**.
 
 Projekt je určený na prezentáciu vlastnej konštrukcie meteostanice.
