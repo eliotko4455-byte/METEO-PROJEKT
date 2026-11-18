@@ -14,7 +14,21 @@ Vzdialené zobrazenie a ovládanie cez mobilný telefón
 
 Nastavenie meteostanice priamo na displeji
 
-![Hlavná obrazovka meteostanice – 7" displej](METEO_OBRAZOVKA.png)
+<!-- METEO PUBLIC FOTO START -->
+
+### Hlavna obrazovka
+
+![Hlavna obrazovka meteostanice](METEO_OBRAZOVKA.png)
+
+### Hodiny
+
+![Obrazovka s hodinami](METEO_HODINY.png)
+
+### SETUP
+
+![Obrazovka nastaveni SETUP](METEO_SETUP.png)
+
+<!-- METEO PUBLIC FOTO END -->
 
 Zdrojový kód projektu nie je verejne dostupný. 
 
