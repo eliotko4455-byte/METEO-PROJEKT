@@ -6,7 +6,7 @@ Vlastný projekt meteostanice postavenej na **Raspberry Pi**, so 7-palcovým dot
 
 - **Raspberry Pi** – hlavná jednotka, spracovanie nameraných údajov, predpovede počasia a ovládanie dotykového rozhrania.
 - **Oficiálny 7" dotykový displej pre Raspberry Pi** – zobrazenie hodín, meteorologických údajov a nastavení.
-- **Vnútorný senzor BME280** – teplota, relatívna vlhkosť a atmosférický tlak; pripojenie cez **I²C** (adresa `0x77`).
+- **Vnútorný senzor BME280** – teplota, relatívna vlhkosť a atmosférický tlak; pripojenie cez **I²C** (adresa `0x77`), s pravidelným meraním.
 - **Vonkajší modul ESP32-C6 + BME280** – samostatné meranie teploty, vlhkosti a tlaku. Údaje odosiela cez **2,4 GHz Wi-Fi**.
 - **Wi-Fi adaptér TP-Link pre 5 GHz** – pripojenie hlavnej jednotky k domácej sieti, s indikáciou sily signálu.
 
@@ -17,7 +17,7 @@ Vlastný projekt meteostanice postavenej na **Raspberry Pi**, so 7-palcovým dot
 - Aktuálna vnútorná a vonkajšia **teplota, vlhkosť a tlak**.
 - Dátum, čas a aktuálny stav počasia s **animovanými ikonami**.
 - Predpoveď na najbližších **5 hodín**, predpoveď na zajtra a samostatná **7-dňová predpoveď**.
-- Graf vývoja teploty v priebehu dňa.
+- Graf vývoja teploty v priebehu dňa a samostatná obrazovka grafu s časovou osou.
 - Pocitová teplota, vietor, zrážky a UV index podľa dostupných meteorologických údajov.
 - Fáza Mesiaca, údaje o Slnku a časy východu a západu.
 - Prístup k obrazovkám **Nastavenia, Grafy, Mapa, Radar a 7 dní**.
@@ -26,11 +26,11 @@ Vlastný projekt meteostanice postavenej na **Raspberry Pi**, so 7-palcovým dot
 ### 2. Obrazovka s analógovými hodinami
 
 - Veľký analógový ciferník s aktualizáciou ručičiek.
-- Aktuálny dátum a meteorologické údaje z vnútorného aj vonkajšieho modulu.
-- Informácia o počasí s animovanou ikonou.
+- Aktuálny dátum, vnútorná a vonkajšia teplota a vlhkosť, atmosférický tlak a jeho 3-hodinový trend podľa dostupnej predpovede.
+- Aktuálne počasie s animovanou ikonou a dennými minimami a maximami teploty; bez zobrazenia viacdňovej predpovede alebo radarovej mapy na ciferníku.
 - Indikácia sily domácej **5 GHz Wi-Fi** a spojenia s vonkajším modulom.
 - Ukazovatele **jasu displeja** a **teploty procesora Raspberry Pi**.
-- Dotykom na obrazovku hodín sa zobrazí hlavná meteorologická obrazovka.
+- Dotykom na obrazovku hodín sa zobrazí hlavná meteorologická obrazovka; dotykom na voľnú plochu hlavnej obrazovky sa obnovia hodiny.
 
 ### 3. SETUP – nastavenia meteostanice
 
@@ -44,7 +44,8 @@ Vlastný projekt meteostanice postavenej na **Raspberry Pi**, so 7-palcovým dot
 
 ## Radar a ďalšie funkcie
 
-- **SHMÚ radar ZMAX:** celoobrazovkový radar s animáciou zachytených snímok, časovým posuvom a históriou približne **50 minút**.
+- **SHMÚ radar ZMAX:** celoobrazovkový radar so skutočnými **5-minútovými radarovými meraniami**, animáciou, časovým posuvom a históriou približne **50 minút**.
+- Radarové snímky sa priebežne načítavajú aj počas zobrazenia analógových hodín, bez nutnosti prepínať obrazovku.
 - **Mapa:** mapové podklady **OpenStreetMap**.
 - Bezdrôtový zber údajov z vonkajšieho modulu s kontrolou aktuálnosti meraní.
 - Možnosť vzdialeného zobrazenia a ovládania cez mobilný telefón.
