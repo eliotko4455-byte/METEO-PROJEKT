@@ -1,5 +1,7 @@
 # METEO – Wi-Fi meteostanica
 
+**🇸🇰 Slovensky (SK)** | [🇬🇧 English (EN)](README_EN.md)
+
 Vlastný projekt meteostanice postavenej na **Raspberry Pi**, so 7-palcovým dotykovým displejom a samostatným vonkajším meracím modulom. Grafické používateľské rozhranie s rozlíšením **800 × 480 px** vychádza z verzie **METEO223**.
 
 ## Hardvér
