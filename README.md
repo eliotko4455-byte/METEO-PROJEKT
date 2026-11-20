@@ -2,7 +2,7 @@
 
 **🇸🇰 Slovensky (SK)** | [🇬🇧 English (EN)](README_EN.md)
 
-Vlastný projekt meteostanice postavenej na **Raspberry Pi**, so 7-palcovým dotykovým displejom a samostatným vonkajším meracím modulom. Grafické používateľské rozhranie s rozlíšením **800 × 480 px** vychádza z verzie **METEO223**.
+Vlastný projekt meteostanice postavenej na **Raspberry Pi**, so 7-palcovým dotykovým displejom a samostatným vonkajším meracím modulom. Grafické používateľské rozhranie s rozlíšením **800 × 480 px** predstavuje aktuálny projekt METEO.
 
 ## Hardvér
 
@@ -59,13 +59,13 @@ Snímky pochádzajú priamo z bežiacej meteostanice. Makro **PUBLIC FOTO** ich 
 <!-- METEO PUBLIC FOTO START -->
 
 ### Hlavná obrazovka
-![Hlavná obrazovka meteostanice](METEO223_OBRAZOVKA.png)
+![Hlavná obrazovka meteostanice](METEO_HLAVNA.png)
 
-### Nastavenie jasu displeja
-![Nastavenie jasu displeja](METEO223_NASTAVENIA.png)
+### Nastavenia
+![Obrazovka nastavení](METEO_NASTAVENIA.png)
 
-### Obrazovka s hodinami
-![Obrazovka s hodinami](METEO223_HODINY.png)
+### Hodiny
+![Obrazovka s hodinami](METEO_HODINY.png)
 
 <!-- METEO PUBLIC FOTO END -->
 

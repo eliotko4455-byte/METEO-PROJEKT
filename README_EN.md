@@ -2,7 +2,7 @@
 
 [🇸🇰 Slovensky (SK)](README.md) | **🇬🇧 English (EN)**
 
-A custom weather station built on a **Raspberry Pi**, featuring a 7-inch touchscreen and a separate outdoor sensor module. Its **800 × 480 px** graphical user interface is based on **METEO223**.
+A custom weather station built on a **Raspberry Pi**, featuring a 7-inch touchscreen and a separate outdoor sensor module. Its **800 × 480 px** graphical user interface shows the METEO project.
 
 ## Hardware
 
@@ -58,14 +58,14 @@ These screenshots were captured directly from the running weather station. The *
 
 <!-- METEO PUBLIC FOTO START -->
 
-### Hlavná obrazovka
-![Hlavná obrazovka meteostanice](METEO223_OBRAZOVKA.png)
+### Main screen
+![Main weather screen](METEO_HLAVNA.png)
 
-### Nastavenie jasu displeja
-![Nastavenie jasu displeja](METEO223_NASTAVENIA.png)
+### Settings
+![Settings screen](METEO_NASTAVENIA.png)
 
-### Obrazovka s hodinami
-![Obrazovka s hodinami](METEO223_HODINY.png)
+### Clock
+![Analog clock screen](METEO_HODINY.png)
 
 <!-- METEO PUBLIC FOTO END -->
 
