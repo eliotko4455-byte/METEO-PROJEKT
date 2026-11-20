@@ -58,17 +58,14 @@ These screenshots were captured directly from the running weather station. The *
 
 <!-- METEO PUBLIC FOTO START -->
 
-### Main Screen
+### Hlavná obrazovka
+![Hlavná obrazovka meteostanice](METEO223_OBRAZOVKA.png)
 
-![Main weather station screen](METEO_OBRAZOVKA.png)
+### Nastavenie jasu displeja
+![Nastavenie jasu displeja](METEO223_NASTAVENIA.png)
 
-### Clock
-
-![Analog clock screen](METEO_HODINY.png)
-
-### SETUP
-
-![Weather station settings screen](METEO_SETUP.png)
+### Obrazovka s hodinami
+![Obrazovka s hodinami](METEO223_HODINY.png)
 
 <!-- METEO PUBLIC FOTO END -->
 
