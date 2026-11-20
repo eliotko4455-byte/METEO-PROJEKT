@@ -59,16 +59,13 @@ Snímky pochádzajú priamo z bežiacej meteostanice. Makro **PUBLIC FOTO** ich 
 <!-- METEO PUBLIC FOTO START -->
 
 ### Hlavná obrazovka
-
 ![Hlavná obrazovka meteostanice](METEO_OBRAZOVKA.png)
 
-### Hodiny
+### Nastavenie jasu displeja
+![Nastavenie jasu displeja](METEO_NASTAVENIA.png)
 
-![Obrazovka s analógovými hodinami](METEO_HODINY.png)
-
-### SETUP
-
-![Obrazovka nastavení meteostanice](METEO_SETUP.png)
+### Obrazovka s hodinami
+![Obrazovka s hodinami](METEO_HODINY.png)
 
 <!-- METEO PUBLIC FOTO END -->
 
