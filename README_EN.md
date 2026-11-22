@@ -2,7 +2,7 @@
 
 [🇸🇰 Slovensky (SK)](README.md) | **🇬🇧 English (EN)**
 
-A custom weather station built on a **Raspberry Pi**, featuring a 7-inch touchscreen and a separate outdoor sensor module. Its **800 × 480 px** graphical user interface shows the METEO project.
+A custom weather station built on a **Raspberry Pi**, featuring a 7-inch touchscreen and a separate outdoor sensor module. Its **800 × 480 px** graphical user interface is based on the current **METEO234** version.
 
 ## Hardware
 
@@ -24,6 +24,8 @@ A custom weather station built on a **Raspberry Pi**, featuring a 7-inch touchsc
 - Moon phase, solar information, sunrise and sunset times.
 - Access to the **Settings, Charts, Map, Radar and 7 Days** screens.
 - Forecast data from **SHMÚ ALADIN**, with **Open-Meteo** as a fallback when SHMÚ data is unavailable.
+- **Foreca** supplies icons for current conditions, the next 5 hours and the 7-day forecast; the original weather sources remain available if Foreca cannot be reached.
+- The status line indicates weather-data freshness and when Foreca icons are used.
 
 ### 2. Analog Clock Screen
 
@@ -42,15 +44,18 @@ A custom weather station built on a **Raspberry Pi**, featuring a 7-inch touchsc
 - **KOREKCIA (Correction):** calibration of the temperature and humidity values displayed from the indoor BME280 sensor.
 - **WiFi:** selection and configuration of the home wireless network using an on-screen keyboard.
 - **ESP32:** configuration of the outdoor module's connection to the 2.4 GHz network.
+- **FARBY (Colors):** independent, persistently saved display colors for indoor and outdoor temperature.
 - Settings can be saved or canceled.
 
 ## Radar and Additional Features
 
 - **SHMÚ ZMAX Radar:** full-screen radar with actual **5-minute radar observations**, animation, timeline and approximately **50 minutes of history**.
-- Radar frames continue loading in the background while the analog clock screen is displayed, without requiring screen changes.
+- **METEO234:** when the radar screen is closed, only the latest SHMÚ observation and a small area around the station are processed to detect nearby precipitation. Full radar history and map overlays are loaded when the radar screen is opened.
+- The **“Precipitation Nearby”** status is based on actual radar observations; unavailable or stale readings are indicated.
 - **Map:** **OpenStreetMap** mapping data.
 - Wireless reception of outdoor readings with checks for data freshness.
 - Remote viewing and control from a mobile phone.
+- **METEO234 efficiency improvements:** redundant main-screen redraws are suppressed while SETUP is open, and the screen refreshes after SETUP closes. Internet connectivity checks prioritize successfully received weather data over additional test requests.
 
 ## Photos of the Actual Screens
 
