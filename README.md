@@ -2,7 +2,7 @@
 
 **🇸🇰 Slovensky (SK)** | [🇬🇧 English (EN)](README_EN.md)
 
-Vlastný projekt meteostanice postavenej na **Raspberry Pi**, so 7-palcovým dotykovým displejom a samostatným vonkajším meracím modulom. Grafické používateľské rozhranie s rozlíšením **800 × 480 px** predstavuje aktuálny projekt METEO.
+Vlastný projekt meteostanice postavenej na **Raspberry Pi**, so 7-palcovým dotykovým displejom a samostatným vonkajším meracím modulom. Grafické používateľské rozhranie s rozlíšením **800 × 480 px** vychádza z aktuálnej verzie **METEO234**.
 
 ## Hardvér
 
@@ -24,6 +24,8 @@ Vlastný projekt meteostanice postavenej na **Raspberry Pi**, so 7-palcovým dot
 - Fáza Mesiaca, údaje o Slnku a časy východu a západu.
 - Prístup k obrazovkám **Nastavenia, Grafy, Mapa, Radar a 7 dní**.
 - Predpoveď využíva údaje **SHMÚ ALADIN** s náhradným zdrojom **Open-Meteo**, ak nie sú údaje SHMÚ dostupné.
+- **Foreca** poskytuje ikony aktuálneho počasia, nasledujúcich 5 hodín a 7-dňovej predpovede; pri nedostupnosti služby zostávajú pôvodné zdroje počasia.
+- Stavový riadok uvádza aktuálnosť meteorologických údajov a použitie ikon Foreca.
 
 ### 2. Obrazovka s analógovými hodinami
 
@@ -42,15 +44,18 @@ Vlastný projekt meteostanice postavenej na **Raspberry Pi**, so 7-palcovým dot
 - **KOREKCIA:** kalibrácia zobrazovanej teploty a vlhkosti vnútorného BME280.
 - **WiFi:** výber a konfigurácia domácej bezdrôtovej siete prostredníctvom dotykovej klávesnice.
 - **ESP32:** nastavenie pripojenia vonkajšieho modulu k 2,4 GHz sieti.
+- **FARBY:** samostatné nastavenie farieb zobrazenia vnútornej a vonkajšej teploty s trvalým uložením.
 - Možnosť nastavenia uložiť alebo zrušiť.
 
 ## Radar a ďalšie funkcie
 
 - **SHMÚ radar ZMAX:** celoobrazovkový radar so skutočnými **5-minútovými radarovými meraniami**, animáciou, časovým posuvom a históriou približne **50 minút**.
-- Radarové snímky sa priebežne načítavajú aj počas zobrazenia analógových hodín, bez nutnosti prepínať obrazovku.
+- **METEO234:** mimo radarovej obrazovky sa pre zistenie zrážok v okolí stanice spracúva iba najnovšie meranie SHMÚ a malá oblasť okolo stanice. Celá radarová história a mapové vrstvy sa načítajú až po otvorení radaru.
+- Stav **„ZRÁŽKY V OKOLÍ“** vychádza zo skutočného radarového merania; pri nedostupných alebo starých dátach sa zobrazí upozornenie.
 - **Mapa:** mapové podklady **OpenStreetMap**.
 - Bezdrôtový zber údajov z vonkajšieho modulu s kontrolou aktuálnosti meraní.
 - Možnosť vzdialeného zobrazenia a ovládania cez mobilný telefón.
+- **Úspornejšia prevádzka METEO234:** pri prekrytí hlavnej obrazovky oknom SETUP sa obmedzuje zbytočné prekresľovanie; po zatvorení sa zobrazenie aktualizuje. Kontrola internetového pripojenia uprednostňuje skutočne prijaté meteorologické údaje pred pomocnými testmi.
 
 ## Fotografie skutočných obrazoviek
 
